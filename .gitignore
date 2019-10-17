@@ -54,3 +54,33 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+
+# Cocoapods
+ios/Pods
+
+# Build Artifacts
+*.dSYM.zip
+*.ipa
+fastlane/README.md
+fastlane/report.xml
+index.android.map
+index.ios.map
+/artifacts
+/build
+
+# Bundle artifact
+*.jsbundle
+coverage/
+google-play.json
+.env
+.env.production
+!fastlane/.env.production
+
+# VS Code
+.vscode
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
