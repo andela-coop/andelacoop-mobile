@@ -2,9 +2,9 @@ import React from "react"
 import { Platform, StatusBar, Text, View } from "react-native"
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/integration/react"
-import * as Font from "expo-font"
+// import * as Font from "expo-font"
 import { useScreens } from "react-native-screens"
-import { Asset } from 'expo-asset'
+// import { Asset } from 'expo-asset'
 
 import DebugConfig from "./config/debug-config"
 import { AppWithNavigationState } from "./navigation/redux-navigation"
@@ -45,14 +45,14 @@ class App extends React.Component {
 	}
 	
 	loadResourcesAsync = async () => {
-		await Promise.all([
-			Asset.loadAsync([
+		// await Promise.all([
+		// 	Asset.loadAsync([
 			
-			]),
-			Font.loadAsync({
+		// 	]),
+		// 	Font.loadAsync({
 			
-			}),
-		])
+		// 	}),
+		// ])
 		
 		this.setState({ isLoadingComplete: true })
 	}
