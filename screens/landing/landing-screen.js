@@ -4,13 +4,13 @@ import {
   Text,
   Image,
   ScrollView,
-  TouchableHighlight,
   Dimensions
 } from "react-native"
 import { connect } from "react-redux"
 import { images } from '../../theme';
 import styles from './styles';
 import Button from "../../components/Button";
+import SliderDots from "../../components/SliderDots";
 
 const {
   logoWithText, homeSliderImage1, homeSliderImage2, homeSliderImage3
@@ -73,20 +73,11 @@ class LandingPage extends Component {
           }
           </ScrollView>
         </View>
-        <View style={{
-          flexDirection: 'row',
-          width: 70,
-          justifyContent: 'space-between'
-        }}>
-          {sliderImages.map((image, index) => <View style={{
-            backgroundColor: currentSlide === index ? '#3359DB' : '#DAE1E7',
-            height: 10,
-            width: 10,
-            borderRadius: 50,
-            marginBottom: 50
-          }} key={image.uri} />
-          )}
-        </View>
+
+        <SliderDots
+          activeDot={currentSlide}
+          length={sliderImages.length}
+        />
         <Button text="get started" />
 	    </View>
     )
