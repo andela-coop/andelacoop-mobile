@@ -10,6 +10,7 @@ import {
 import { connect } from "react-redux"
 import { images } from '../../theme';
 import styles from './styles';
+import Button from "../../components/Button";
 
 const {
   logoWithText, homeSliderImage1, homeSliderImage2, homeSliderImage3
@@ -86,9 +87,7 @@ class LandingPage extends Component {
           }} key={image.uri} />
           )}
         </View>
-        <TouchableHighlight style={styles.btn}>
-          <Text style={styles.btnText}>Get Started</Text>
-        </TouchableHighlight>
+        <Button text="get started" />
 	    </View>
     )
   }

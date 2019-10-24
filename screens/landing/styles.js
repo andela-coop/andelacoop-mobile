@@ -1,11 +1,11 @@
 import { fonts } from '../../theme';
-import { Dimensions } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 const { lato, roboto } = fonts;
 const andelaBlue = '#3359DB';
 const { width } = Dimensions.get('window');
 
-export default {
+export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -20,29 +20,11 @@ export default {
   headline: {
     color: andelaBlue,
     fontSize: 18,
-    fontFamily: lato,
+    // fontFamily: lato,
     textTransform: 'capitalize',
     width: 347,
     textAlign: 'center',
     marginBottom: 10
-  },
-  btn: {
-    borderColor: andelaBlue,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderTopLeftRadius: 19,
-    borderBottomRightRadius: 19,
-  },
-  btnText: {
-    color: andelaBlue,
-    letterSpacing: 3,
-    fontFamily: roboto,
-    textTransform: 'uppercase',
-    fontWeight: '300',
-    fontSize: 13,
-    paddingHorizontal: 60,
-    paddingVertical: 20,
-    lineHeight: 19,
   },
   slideContainer: {
     height: 370,
@@ -65,6 +47,6 @@ export default {
     textAlign: 'center',
     fontWeight: '300',
     color: '#606F7B',
-    fontFamily: roboto,
+    // fontFamily: roboto,
   }
-};
+});
