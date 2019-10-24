@@ -35,11 +35,15 @@ class LandingPage extends Component {
   handleScroll = (e) => {
     const { width } = Dimensions.get('window');
     const scrollPosition = e.nativeEvent.contentOffset.x;
-    if (scrollPosition === 0) {
+    const ninetyPercentOfWidth = 0.9 * width;
+    if (scrollPosition < ninetyPercentOfWidth) {
       this.setState({ currentSlide: 0 });
-    } else if (scrollPosition === width) {
+    } else if (
+      scrollPosition >= ninetyPercentOfWidth
+      && scrollPosition <= ninetyPercentOfWidth * 2
+    ) {
       this.setState({ currentSlide: 1 });
-    } else if (scrollPosition === width * 2) {
+    } else {
       this.setState({ currentSlide: 2 });
     }
   }
