@@ -20,7 +20,7 @@ export default StyleSheet.create({
   headline: {
     color: andelaBlue,
     fontSize: 18,
-    // fontFamily: lato,
+    fontFamily: lato,
     textTransform: 'capitalize',
     width: 347,
     textAlign: 'center',
@@ -47,6 +47,6 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontWeight: '300',
     color: '#606F7B',
-    // fontFamily: roboto,
+    fontFamily: roboto,
   }
 });

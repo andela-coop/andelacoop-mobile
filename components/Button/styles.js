@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   btnText: {
     letterSpacing: 3,
-    // fontFamily: roboto,
+    fontFamily: roboto,
     textTransform: 'uppercase',
     fontWeight: '300',
     fontSize: 13,
