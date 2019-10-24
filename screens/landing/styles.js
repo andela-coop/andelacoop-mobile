@@ -1,13 +1,15 @@
-import images from '../../theme/images';
+import { fonts } from '../../theme';
+import { Dimensions } from 'react-native';
 
-const { backgroundImage, logoWithText } = images;
+const { lato, roboto } = fonts;
 const andelaBlue = '#3359DB';
+const { width } = Dimensions.get('window');
 
 export default {
   container: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100%'
   },
   image: {
     height: 48,
@@ -18,11 +20,11 @@ export default {
   headline: {
     color: andelaBlue,
     fontSize: 18,
-    fontFamily: 'Lato-Regular',
+    fontFamily: lato,
     textTransform: 'capitalize',
     width: 347,
     textAlign: 'center',
-    marginBottom: 30
+    marginBottom: 10
   },
   btn: {
     borderColor: andelaBlue,
@@ -34,34 +36,35 @@ export default {
   btnText: {
     color: andelaBlue,
     letterSpacing: 3,
-    fontFamily: 'Roboto-Regular',
+    fontFamily: roboto,
     textTransform: 'uppercase',
-    fontVariant: ['small-caps'],
-    fontWeight: "300",
+    fontWeight: '300',
     fontSize: 13,
     paddingHorizontal: 60,
     paddingVertical: 20,
     lineHeight: 19,
   },
-  slideParent: {
-    height: 381,
-    width: '100%',
-    marginBottom: 50
+  slideContainer: {
+    height: 370,
+    marginBottom: 20
   },
   slide: {
-    backgroundColor: 'red',
     flex: 1,
   },
   slideItem: {
-    backgroundColor: 'blue',
+    width,
+    paddingHorizontal: 35,
+  },
+  slideImage: {
+    resizeMode: 'contain',
     flex: 1,
+    width: '100%',
+    height: 'auto',
   },
-  slideItem2: {
-    backgroundColor: 'green',
-    width: '100%'
-  },
-  slideItem3: {
-    backgroundColor: 'yellow',
-    width: '100%'
+  imageText: {
+    textAlign: 'center',
+    fontWeight: '300',
+    color: '#606F7B',
+    fontFamily: roboto,
   }
 };
